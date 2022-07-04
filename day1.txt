@@ -116,12 +116,126 @@ Azure Stack: Manage Azure Stack resources such as virtual machines, DNS, VNet, a
 
 $ terraform init
 
+===========================================================
+==============================================
+How to write  HCL code?
+------------------------------
+file ext -> .tf
+filename -> anything
+---------------------------------------
+What is Your Desire?
+------------------------------
+Azure
+		resource group
+		Compute - vm
+		storage - 
+		network
+AWS
+		ec2-instance
+Github
+		repo
+----------------------------------------
+AWS - API - 4500
+	Resources
+
+Azure - API - 400
+	Resources
+
+Github - API - 200
+	Resources
+ 
+K8 - API
+------------------------------------
+Code
+Step 1 - Identify your resources
+-----------------------------------
+resource 1
+{
+
+}
+
+resource 2
+{
+
+}
+
+resource 3
+{
+
+}
+
+resource azurerm_linux_virtual_machine
+{
+
+}
+
+resource github_repos
+{
+
+}
+
+resource aws_instance
+{
+
+}
+
+------------------------------------
+Code
+Step 2 - Identify your resource's Arguments
+-----------------------------------
+resource azurerm_linux_virtual_machine
+{
+	Arguments1=X
+	Arguments2=y
+	Arguments3=z
+
+}
+
+resource azurerm_resource_group
+{
+	Arguments1=X
+	Arguments2=y
+	Arguments3=z
+
+}
 
 
+resource github_repos
+{
+	Arguments1=X
+	Arguments2=y
+	Arguments3=z
+}
+
+resource aws_instance
+{
+	Arguments1=X
+	Arguments2=y
+	Arguments3=z
+
+}
+
+terraform-demoa
+CLIENT ID - 7e757450-7239-4c36-88f8-6664f3e49a49
+TENANT ID - bc0f52a6-5a6d-45f4-8842-36ab113a5eb5
+CLIENT CRED ID _ ed7cbc05-0465-4039-b628-2901b65dd2a6
+CLINET CRED VALU _ yhJ8Q~T7ycWjr4PjQ2ZUkTKgLeKTQ82YYGdiscP9
+
+Option 1
+$ export ARM_CLIENT_ID="00000000-0000-0000-0000-000000000000"
+$ export ARM_CLIENT_SECRET="00000000-0000-0000-0000-000000000000"
+$ export ARM_SUBSCRIPTION_ID="00000000-0000-0000-0000-000000000000"
+$ export ARM_TENANT_ID="00000000-0000-0000-0000-000000000000"
+
+Option 2 
+provider "azurerm" {
+  features {}
+
+  subscription_id = "54d18623-a88e-4b6e-bcfe-a772406993b0"
+  client_id       = "7e757450-7239-4c36-88f8-6664f3e49a49"
+  client_secret   = "yhJ8Q~T7ycWjr4PjQ2ZUkTKgLeKTQ82YYGdiscP9"
+  tenant_id       = "bc0f52a6-5a6d-45f4-8842-36ab113a5eb5"
+}
 
 
-
-
-
-
-
+init -> validate -> plan --> apply -> show ->
