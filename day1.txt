@@ -1,0 +1,127 @@
+Start - 930 AM IST
+End - 5:30 PM IST
+=========================
+Lunch BREAK - 1 PM  - 2 PM IST
+------------------------------------
+11 AM IST - 15mins
+3:30 PM IST - 15 mins
+
+Demo + LAB == 
+==================================================
+==================================================
+What is Terraform?
+-----------------------------
+	IAAC
+	infra as a code
+	Coding for infra
+	Written in Go
+	by Hashicorp
+			vagrant -> terraform -> consul - packer - nomad - vault
+	Release
+	- community - cli - free - os
+	- cloud		- Hosted - Paid - Enterprise
+	- enterprise - Can be installed in ur infra -
+	Version - 1.2X
+	----------------
+	DevOps
+	- Code for Product
+	- Code for testing a software
+	- Code for CI/Cd, Pipeline, Ops, Infra
+
+----------------------
+What is there in infra???
+- vms
+- network
+- storage
+- db
+- security
+- some jobs
+- cloud
+- app
+- multiple software
+- lb
+- gatway
+===================================================
+Why we need Terraform?
+----------------------------------
+- multi cloud platform
+- Code for 2255 tools/platforms/apps
+------------------------------------------------------------
+How it works? Terraform Architecture?
+------------------------------------------
+HUMAN -> HCL -> Terraform -> Providers --> API(Platform) --> Statefile
+=========================================================================
+
+Prob - dev a tool which can be used to write ONE LANG and apply for 100s of tool for coding.
+
+------------------
+API Function
+	- C		R 	U 	D	
+	- POST	GET PUT	DELETE
+	=======================================
+	APPLY 				- DELETE
+	CREATE+Update		delete
+
+Terraform Workflow
+=========================================================
+PLAN --> APPLY --> Delete
+
+INIT -> PLAN --> APPLY --> Delete
+--------
+ONE TIME
+=================================
+How to install terraform?
+==============================================
+Step - 1 - Install Git bash
+- https://git-scm.com/
+
+Step - 2 - Download Terraform
+https://www.terraform.io/downloads
+
+Step 3 - How to verify?
+- Open gitbash
+- $ terraform
+- $ terraform --version
+
+
+How to install Provider? - using HCL code
+==============================================
+https://registry.terraform.io/providers
+
+- Azure
+- AWS
+- Github
+==============================================
+How to write  HCL code?
+------------------------------
+file ext -> .tf
+filename -> anything
+---------------------------
+
+in ONE DIRECTORY - If you have 1 tf OR multiple TF file === Considered 1 TF== 1 project Code
+
+========================
+https://docs.microsoft.com/en-us/azure/developer/terraform/overview
+
+AzureRM: Manage stable Azure resources and functionality such as virtual machines, storage accounts, and networking interfaces.
+
+AzureAD: Manage Azure Active directory resources such as groups, users, service principals, and applications.
+
+AzureDevops: Manage Azure DevOps resources such as agents, repositories, projects, pipelines, and queries.
+
+AzAPI: Manage Azure resources and functionality using the Azure Resource Manager APIs directly. This provider compliments the AzureRM provider by enabling the management of Azure resources that aren't released. For more information about the AzAPI provider, see Terraform AzAPI provider.
+
+Azure Stack: Manage Azure Stack resources such as virtual machines, DNS, VNet, and storage.
+
+
+$ terraform init
+
+
+
+
+
+
+
+
+
+
