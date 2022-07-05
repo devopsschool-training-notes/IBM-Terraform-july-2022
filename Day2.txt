@@ -1,0 +1,80 @@
+https://www.devopsschool.com/blog/terraform-variables-complete-reference-guide/
+
+
+variable "numofrg" {
+  type = number
+  description = "This is for demo of number variable"
+  default = 3
+}
+
+variable "grpname" {
+  type = string
+  description = "This is for demo of string variable"
+  default = "devopsschool-grp"
+}
+
+variable "users" {
+    type    = list
+    default = ["devops-school-1", "devops-school-2", "devops-school-3"]
+    description = "This is for demo of list variable"
+}
+
+variable "grps" {
+  type = map
+  default 	= {
+    one = "hello1"
+    two = "hello2"
+  }
+}
+
+resource "azurerm_resource_group" "mapdemo1" {
+  name     = var.grps["one"]
+  location = "South India"
+}
+
+resource "azurerm_resource_group" "mapdemo2" {
+  name     = var.grps["two"]
+  location = "South India"
+}
+
+resource "azurerm_resource_group" "listdemo" {
+  name     = var.users[0]
+  location = "South India"
+}
+
+resource "azurerm_resource_group" "listdemo1" {
+  name     = var.users[1]
+  location = "South India"
+}
+
+resource "azurerm_resource_group" "listdemo2" {
+  name     = var.users[2]
+  location = "South India"
+}
+
+resource "azurerm_resource_group" "example1" {
+  name     = var.grpname
+  location = "South India"
+}
+
+resource "azurerm_resource_group" "example" {
+  count = var.numofrg
+  name     = "devopsschool-${count.index}"
+  location = "South India"
+}
+
+output "resource_group4" { 
+	value = azurerm_resource_group.example1.name
+ }
+ 
+output "resource_group" { 
+	value = azurerm_resource_group.example[0].name
+ }
+
+output "resource_group1" { 
+	value = azurerm_resource_group.example[1].name
+ }
+ 
+output "resource_group2" { 
+	value = azurerm_resource_group.example[2].name
+}
